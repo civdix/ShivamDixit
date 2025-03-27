@@ -23,7 +23,7 @@ export default function Home(){
    
      <div className="codeSpace">
       <span className="declaration">const</span> API_URL = 
-      <span className="string"> "https://dummyapi.com/user-data"</span>; <br />
+      <span className="string"> "https://My_Life.com/shivamdixit"</span>; <br />
 
       <span className="keyword">async function</span> fetchData() {"{"} <br />
       &nbsp;&nbsp;<span className="keyword">try</span> {"{"} <br />
@@ -34,8 +34,8 @@ export default function Home(){
       <br />
       &nbsp;&nbsp;&nbsp;&nbsp;<span className="declaration">const</span> {"{ name, skill, status }"} = data; <br />
       <br />
-      &nbsp;&nbsp;&nbsp;&nbsp;<span className="function">console.log</span>(<span className="string">`Name: {"${name}"}`</span>); <br />
-      &nbsp;&nbsp;&nbsp;&nbsp;<span className="function">console.log</span>(<span className="string">`Skill: {"${skill}"}`</span>); <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;<span className="function">console.log</span>(<span className="string">`Initializing: {"${name}"}`</span>); <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;<span className="function">console.log</span>(<span className="string">`Skills Loaded: {"${skill}"}`</span>); <br />
       &nbsp;&nbsp;&nbsp;&nbsp;<span className="function">console.log</span>(<span className="string">`Status: {"${status}"}`</span>); <br />
       &nbsp;&nbsp;{"}"} <span className="keyword">catch</span> (error) {"{"} <br />
       &nbsp;&nbsp;&nbsp;&nbsp;<span className="function">console.error</span>(<span className="string">`Error fetching data: {"${error.message}"}`</span>); <br />
