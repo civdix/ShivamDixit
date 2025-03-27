@@ -1,0 +1,109 @@
+
+@font-face {
+  font-family: 'Project';
+  src: url('../fonts/Project.otf') format("opentype"); 
+}
+/* #projects{
+  display: flex;
+  padding: 4px;
+  flex-direction: row-reverse;
+flex-wrap: wrap;
+justify-content: center;
+
+}
+.project{
+  min-width: 30%;
+  max-width: 33%;
+  height: 33vh;
+}
+.repoName{
+  font-family: 'Project', sans-serif;
+  
+} */
+/* Chunky Tech Theme - Neon Portfolio Styles */
+
+:root {
+  --neon-blue: #00eaff;
+  --neon-light: #66fcf1;
+  --neon-green: #2ff924;
+  --neon-light-green: #6eff71;
+  --neon-dark: #111;
+  --text-color: #e0e0e0;
+}
+
+#Project {
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.text-neon-blue {
+  color: var(--neon-blue);
+}
+
+.text-neon-green {
+  color: var(--neon-green);
+}
+
+.bg-neon-dark {
+  background-color: var(--neon-dark);
+}
+
+.border-neon-blue {
+  border-color: var(--neon-blue);
+}
+
+.bg-neon-blue {
+  background-color: var(--neon-blue);
+  transition: 0.3s ease;
+}
+
+.bg-neon-blue:hover {
+  background-color: var(--neon-light);
+}
+
+.bg-neon-green {
+  background-color: var(--neon-green);
+  transition: 0.3s ease;
+}
+
+.bg-neon-green:hover {
+  background-color: var(--neon-light-green);
+}
+
+.shadow-lg {
+  box-shadow: 0px 0px 15px var(--neon-blue);
+}
+
+.rounded-2xl {
+  border-radius: 20px;
+}
+
+.projectIndi{
+  min-width: 32%;
+  max-width: 33%;
+  min-height: 25vh;
+}
+
+.Card{
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+  border-radius: 30px;
+  height: 40vh;
+  padding: 5%;
+  justify-content: center;
+  align-items: center;
+  gap: 5;
+  margin: 2%;
+  margin-bottom: 3%;
+}
+.projectsArray{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:4;
+  justify-content: center;
+  align-items: center;
+
+
+}

@@ -1,0 +1,65 @@
+.MyImage{
+  max-width: 4vw;
+  border-radius: 50%;
+  opacity: 0;
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95vw;
+  margin: 1% 2.4vw 1% 2.4vw;
+  display: flex;
+  gap: 50%;
+  box-shadow: 4px 3px 4px  #32b8f7;
+  border-radius: 50%;
+  /* border-top: 100px solid #8813e9; */
+  z-index: 100;
+  /* padding: ; */
+  /* flex-direction: column */
+}
+.myName ,.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.nav{
+  float: right;
+  gap:10%;
+  white-space: nowrap; /* Prevents text from wrapping */
+
+}
+
+@font-face {
+  font-family: 'Mokoto';
+  src: url('../fonts/Mokoto.ttf') format('truetype'); 
+}
+
+.glitch-text {
+  font-family: 'Mokoto', sans-serif;
+  font-size: 1rem;
+  color: #5d07a3;
+
+}
+
+
+.shiny-text {
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  align-items: center;
+  margin-top: 0.7%;
+}
+.glass-box {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+  /* border-radius: 15px; */
+  /* overflow: hidden; */
+  backdrop-filter: blur(10px); /* Glass blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 4px solid rgba(229, 30, 255, 1); /* Light border */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); Soft shadow */
+ 
+}
