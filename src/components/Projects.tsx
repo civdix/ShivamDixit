@@ -11,12 +11,7 @@ interface Repo {
   homepage?: string;
 }
 
-// Custom Card Component
-const Card: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="bg-neon-dark border border-neon-blue shadow-lg rounded-2xl p-5">
-    {children}
-  </div>
-);
+
 
 // Custom Button Component
 const Button: React.FC<{ href: string; children: React.ReactNode; className?: string }> = ({

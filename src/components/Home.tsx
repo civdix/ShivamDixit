@@ -1,7 +1,7 @@
 
 import "../assets/styles/Home.css"
 import Shivdix from "../assets/images/SHIVDIX.png"
-import {useState, useEffect, useRef} from "react"
+import {useState, useEffect} from "react"
 export default function Home(){
   const [logs, setLogs] = useState<string[]>([]);
   useEffect(() => {
