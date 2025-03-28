@@ -1,4 +1,3 @@
-
 import '../assets/styles/Navbar.css';
 // Will make Navbar Down side
 const handleResumeDownload=()=>{
