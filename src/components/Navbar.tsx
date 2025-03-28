@@ -2,6 +2,18 @@
 
 import '../assets/styles/Navbar.css';
 // Will make Navbar Down side
+const handleResumeDownload=()=>{
+           
+  const fileUrl = "../assets/documents/Shivam_Dixit_Resume.pdf"; // Replace with the actual file path
+  const link = document.createElement("a");
+  link.href = fileUrl;
+  link.download = "Shivam_Dixit_Resume.pdf"; // Set the filename
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  
+
+}
 export function Navbar() {
   return (
     <div className="navbar glass-box">
@@ -22,8 +34,8 @@ export function Navbar() {
         <div className="nav-item links">
           <a href="#Contact">Contact Me</a>
         </div>{' '}
-        <div className="nav-item links">
-          <a href="#Resume">Resume</a>
+        <div className="nav-item links" onClick={handleResumeDownload}>
+          <a href="#Resume" onClick={handleResumeDownload}>My Resume</a>
         </div>{' '}
         <div className="nav-item links">
           <a href="#Projects">Projects</a>
