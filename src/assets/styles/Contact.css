@@ -1,0 +1,129 @@
+#Contact{
+    background-color: rgb(36, 21, 49);
+    border-radius: 50px;
+    color: #ffef5e;
+    display: flex;
+    flex-direction: row;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+.divide{
+    color: #f97ff0;
+    border: 1px solid;
+    border-image:  linear-gradient(to top, rgba(33,43,55,0.5),rgba(1,1,1,0.5),#ffef5e,rgba(1,1,1,0.5), rgba(33,43,55,0.5)) 1; 
+    /* box-shadow: 0px -20px 10px black; */
+    writing-mode: vertical-lr;
+    
+    margin:0 3% 0 0%;
+    height: 50%;
+    background-color: rgb(0, 0, 0);
+}
+.basic{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4;
+    float: inline-start;
+    justify-content: flex-start;
+}
+#icon{
+    border:3px solid black;
+    display: block;
+    width: max-content;
+    padding: 3%;
+    align-self: center;
+    animation: goldenLines 4s infinite;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+margin: 6% 0 0 0;
+}
+
+
+@keyframes goldenLines {
+0%{
+    border-image:  linear-gradient(to top, #f97ff0, #ffef5e, #ffef5e, #ffef5e, #ffef5e) 1; 
+    border-radius: 50px; 
+}
+25%{
+    border-image: linear-gradient(to right, #f97ff0, #ffef5e, #ffef5e, #ffef5e, #ffef5e) 1;  
+    border-radius: 50%; 
+
+}
+50%{
+    border-image: linear-gradient(to bottom, #f97ff0, #ffef5e, #ffef5e, #ffef5e, #ffef5e) 1;  
+    border-radius: 50%; 
+
+}
+75%{
+    border-radius: 50%; 
+    border-image: linear-gradient(to left, #ff7e5f, #feb47b) 1;
+}
+100%{
+    border-image: linear-gradient(to top, #f97ff0, #ffef5e, #ffef5e, #ffef5e, #ffef5e) 1;  
+    border-radius: 50%; 
+}   
+}
+
+
+.form{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    min-width: 37%;
+    align-items: baseline;
+    margin: 0 0 0 5%
+    
+}
+.form div{
+    max-width: 90%;
+}
+.form div label{
+    display: block;
+    text-align: start;
+    font-size: 180%;
+}
+.form div input{
+    width: 170%;
+    font-size: 120%;
+    padding: 2% 4%;
+
+}
+.details {
+    position: relative;
+    width: 25vw;
+    min-height: 50vh;
+    border-radius: 50px;
+    overflow: hidden;
+    background: linear-gradient(205deg, #ff6b84, rgb(62, 22, 207), #00aeff);
+
+}
+.submit {
+    position: relative;
+    width: 100%;
+    background: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    overflow: hidden; /* Hides the extra glowing shadow */
+}
+
+
+.submit button:hover {
+    box-shadow: 40px 0px 110px rgba(0, 132, 255, 0.8),-40px 0px 110px  blueviolet;
+}
+.submit button{
+    margin: auto;
+    width: 100%;
+border-radius: 1000px;
+}
