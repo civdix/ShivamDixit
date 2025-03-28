@@ -1,4 +1,3 @@
-import react as React from "react"
 
 import '../assets/styles/Navbar.css';
 // Will make Navbar Down side
@@ -11,8 +10,6 @@ const handleResumeDownload=()=>{
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-  
-
 }
 export function Navbar() {
   return (
