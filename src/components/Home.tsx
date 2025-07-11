@@ -1,21 +1,9 @@
 
 import "../assets/styles/Home.css"
 import Shivdix from "../assets/images/SHIVDIX.png"
-import {useState, useEffect} from "react"
 export default function Home(){
-  const [logs, setLogs] = useState<string[]>([]);
-  useEffect(() => {
-    const coder = {
-      name: "Shivam Dixit",
-      skill: ["Web", "Android", "AI"],
-      status: "Compiling..."
-    };
-
-    // Simulating console log with delays
-    setTimeout(() => setLogs((prev) => [...prev, `> Initializing ${coder.name}...`]), 1000);
-    setTimeout(() => setLogs((prev) => [...prev, `> Skills Loaded: ${coder.skill.join(", ")}`]), 2500);
-    setTimeout(() => setLogs((prev) => [...prev, `> Status: ${coder.status.replace("Compiling...", "Ready!")}`]), 4000);
-  }, []);
+ 
+ 
   return(
     <div className="Home glowing-circle">
 <div className="left">

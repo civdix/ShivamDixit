@@ -1,5 +1,5 @@
 import '../assets/styles/Navbar.css';
-import React, { useState } from 'react'
+import { useState } from 'react'
 // Will make Navbar Down side
 const handleResumeDownload = () => {
   const fileUrl = "../src/assets/documents/Shivam_Dixit_Resume.pdf"; // Replace with the actual file path
