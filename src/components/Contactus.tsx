@@ -52,7 +52,7 @@ type Action = { type: "name",value:string } | { type: "email",value:string } | {
     //         alert("Internal Mailjet api error in mailjet.ts file")
     //     }
     // }
-    return <>
+    return <div className="contactUsMain">
     <h1>Contact me</h1>
     <div id="Contact">
     <div className="basic">
@@ -117,5 +117,5 @@ type Action = { type: "name",value:string } | { type: "email",value:string } | {
 
 
     
-    </>
+    </div>
 }

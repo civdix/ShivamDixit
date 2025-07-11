@@ -127,3 +127,9 @@ margin: 6% 0 0 0;
     width: 100%;
 border-radius: 1000px;
 }
+
+@media screen and (max-width: 768px){
+.contactUsMain{
+  display:none;
+}
+}

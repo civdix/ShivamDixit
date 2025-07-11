@@ -31,7 +31,7 @@ const Button: React.FC<{ href: string; children: React.ReactNode; className?: st
 
 export default function Project() {
   const [projects, setProjects] = useState<Repo[]>([]);
-
+const [loadMore,setLoadMore]=useState(5);
   useEffect(() => {
     fetch("https://api.github.com/users/civdix/repos")
       .then((res) => res.json() as Promise<Repo[]>) // ✅ Type assertion
@@ -48,11 +48,11 @@ export default function Project() {
   }, []);
 
   return (
-    <>
-    <h1 id="Projects">My Projects</h1>
+    <div className="projectMain">
+    <h1 id="Projects rainbow-underline" style={{color:"white"}}>My Projects</h1>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 projectsArray">
 
-    {projects.map((project, index) => (
+    {projects.slice(0,loadMore).map((project, index) => (
       <motion.div
         key={index}
         className="projectIndi"
@@ -76,8 +76,10 @@ export default function Project() {
         </div>
       </motion.div>
     ))}
+    <button style={{margin:"0 auto"}} 
+    onClick={()=>setLoadMore(prev=>prev+5)} disabled={loadMore>=projects.length?true:false>}>{loadMore>=projects.length?"Check After Sometime for new projects":"Load More"}</button>
   </div>
   
-            </>
+            </div>
   );
 }

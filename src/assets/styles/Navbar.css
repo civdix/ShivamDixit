@@ -1,22 +1,27 @@
-.MyImage{
-  max-width: 4vw;
-  border-radius: 50%;
-  opacity: 0;
-}
+
 .navbar{
+    display: flex;
+  align-items: center;     /* ✅ Vertically centers everything */
+  justify-content: space-between;
+  height: 7vh;           /* Adjust to your design */
   position: fixed;
   top: 0;
   left: 0;
-  width: 95vw;
-  margin: 1% 2.4vw 1% 2.4vw;
-  display: flex;
-  gap: 50%;
+  width: 90vw;
+  margin:1% 5vw;
+  padding:0 2% 0 0;
+  /* margin: 1% 2.4vw 1% 2.4vw; */
+ 
   box-shadow: 4px 3px 4px  #32b8f7;
-  border-radius: 50%;
+  border-radius: 99999px;
+  
   /* border-top: 100px solid #8813e9; */
   z-index: 100;
   /* padding: ; */
   /* flex-direction: column */
+}
+.shivamDixit{
+  margin-left: 9px;
 }
 .myName ,.nav{
   display: flex;
@@ -24,26 +29,26 @@
   align-items: center;
   gap: 8px;
 }
+
 .nav{
-  float: right;
+  display:flex;
+  /* float: right; */
   gap:10%;
+  height:100%;
   white-space: nowrap; /* Prevents text from wrapping */
-
+  align-items: center;
+  justify-content: center;
 }
-
 @font-face {
   font-family: 'Mokoto';
   src: url('../fonts/Mokoto.ttf') format('truetype'); 
 }
-
 .glitch-text {
+  min-width:40px;
   font-family: 'Mokoto', sans-serif;
   font-size: 1rem;
   color: #5d07a3;
-
 }
-
-
 .shiny-text {
   font-size: 1rem;
   font-weight: bold;
@@ -51,7 +56,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   align-items: center;
-  margin-top: 0.7%;
+  /* margin-top: 0.7%; */
 }
 .glass-box {
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
@@ -62,4 +67,38 @@
   border-top: 4px solid rgba(229, 30, 255, 1); /* Light border */
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); Soft shadow */
  
+}
+@media screen and (max-width: 768px){
+  .mobile{
+    display:flex;
+  }
+  .menuMobile{
+    display:unset;
+  }
+  .nav{
+    display:none;
+  }
+  .list{
+    display:flex;
+    flex-direction: row;
+    gap:3px;
+  }
+.navbar{
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 95vw;
+  height:auto;
+  margin: 1% 2.4vw 0% 2.4vw;
+  /* gap: 50%; */
+  box-shadow: 4px 3px 4px  #32b8f7;
+  border-radius: 10px;
+  /* border-top: 100px solid #8813e9; */
+  z-index: 100;
+  display: flex;
+  /* padding: 2% 0 0 0; */
+  flex-direction: column;
+  /* padding: ; */
+  /* flex-direction: column */
+}
 }

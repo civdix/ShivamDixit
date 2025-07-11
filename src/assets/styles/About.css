@@ -107,3 +107,10 @@ a {
 a:hover {
   text-shadow: 0 0 10px #ff00ff, 0 0 20px #8f00ff;
 }
+
+@media screen and (max-width: 768px){
+
+.about{
+flex-direction:column-reverse
+}
+}

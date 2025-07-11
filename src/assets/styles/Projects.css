@@ -79,9 +79,8 @@ justify-content: center;
 }
 
 .projectIndi{
-  min-width: 32%;
-  max-width: 33%;
-  min-height: 25vh;
+  flex: 0 0 calc(33.333% - 1rem);  /* 3 items per row with gap adjustment */
+  box-sizing: border-box;
 }
 
 .Card{
@@ -102,8 +101,13 @@ justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   gap:4;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
 
-
+@media screen and (max-width: 768px){
+.projectIndi{
+  flex: 0 0 calc(100% - 1rem);  /* 3 items per row with gap adjustment */
+  box-sizing: border-box;
+}
 }
