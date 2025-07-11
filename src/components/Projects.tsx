@@ -77,7 +77,7 @@ const [loadMore,setLoadMore]=useState(5);
       </motion.div>
     ))}
     <button style={{margin:"0 auto"}} 
-    onClick={()=>setLoadMore(prev=>prev+5)} disabled={loadMore>=projects.length?true:false>}>{loadMore>=projects.length?"Check After Sometime for new projects":"Load More"}</button>
+    onClick={()=>setLoadMore(prev=>prev+5)} disabled={loadMore>=projects.length?true:false}>{loadMore>=projects.length?"Check After Sometime for new projects":"Load More"}</button>
   </div>
   
             </div>
