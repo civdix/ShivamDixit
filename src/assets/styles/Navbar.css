@@ -25,7 +25,7 @@
 }
 .shivamDixit{
   margin-left: 9px;
-  
+
 }
 .myName ,.nav{
   display: flex;
@@ -59,6 +59,7 @@
   font-weight: bold;
   background: linear-gradient(90deg, #ff00ff, #00ffff);
   -webkit-background-clip: text;
+  background-clip:text;
   -webkit-text-fill-color: transparent;
   align-items: center;
   /* margin-top: 0.7%; */

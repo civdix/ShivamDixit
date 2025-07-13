@@ -9,7 +9,7 @@ type EmailParse = {
 }
 export const sendEmail = async ({ name, email, message,phone }:EmailParse) => {
   try {
-    const resultFromSendingMessageMe= await emailjs.send(
+     await emailjs.send(
       'service_arcorwu',     // Dixitshiva.....
       'template_rrlukam',    // Email Goes to ME
       {
@@ -21,7 +21,7 @@ export const sendEmail = async ({ name, email, message,phone }:EmailParse) => {
       'rhGEG25F9oEhiUi_2'      // e.g. A1BcD2EfG3HiJ4KlM
     );
 
-    const resultFromSendingMessageContacter = await emailjs.send(
+     await emailjs.send(
       'service_arcorwu',     // Dixitshiva.....
       'template_ffxpayg',    // Email Goes to Contacter
       { 
