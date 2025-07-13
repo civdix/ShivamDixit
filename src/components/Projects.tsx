@@ -77,8 +77,8 @@ const [loadMore,setLoadMore]=useState(6);
 
 
   return (
-    <div className="projectMain">
-    <h1 id="Projects rainbow-underline" style={{color:"white"}}>My Projects</h1>
+    <div className="projectMain" id="Projects">
+    <h1 id="rainbow-underline" style={{color:"white"}}>My Projects</h1>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 projectsArray">
 
     {projects.slice(0,loadMore).map((project, index) => (
