@@ -32,7 +32,7 @@ link:"ruralrise.vercel.com"},
           <p>💻 JavaScript, TypeScript, Python, React.js, Express.js, Node.js, MongoDB</p>
           <h3>Top Projects</h3>
           <ul>
-          {project.map((proj)=>  <li>📌{proj.name} 
+          {project.map((proj,index)=>  <li key={index}>📌{proj.name} 
             <a href={proj.github}> <FaGithub size={20}/> </a>
             <a href={proj.link}><FaGlobe size={20}/></a>
             </li>)}

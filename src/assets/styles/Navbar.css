@@ -20,8 +20,12 @@
   /* padding: ; */
   /* flex-direction: column */
 }
+.mobileShow{
+  display:none;
+}
 .shivamDixit{
   margin-left: 9px;
+  
 }
 .myName ,.nav{
   display: flex;
@@ -34,6 +38,7 @@
   display:flex;
   /* float: right; */
   gap:10%;
+  min-width:50%;
   height:100%;
   white-space: nowrap; /* Prevents text from wrapping */
   align-items: center;
@@ -69,6 +74,8 @@
  
 }
 @media screen and (max-width: 768px){
+  .mobileShow{
+display:unset;  }
   .mobile{
     display:flex;
   }

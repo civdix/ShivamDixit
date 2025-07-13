@@ -4,11 +4,38 @@ import { useState, useEffect } from "react";
 import "../assets/styles/Projects.css";
 
 // TypeScript Interface for Repo
-interface Repo {
-  name: string;
-  description?: string;
+export interface GithubRepoOwner {
+  login: string;
+  avatar_url: string;
   html_url: string;
-  homepage?: string;
+}
+
+export interface GithubRepo {
+  id: number;
+  name: string;
+  full_name: string;
+  html_url: string;
+  description: string | null;
+  language: string | null;
+  stargazers_count: number;
+  forks_count: number;
+  topics: string[];
+  owner: GithubRepoOwner;
+  created_at: string;
+  updated_at: string;
+  homepage:string;
+}
+interface SimplifiedRepo {
+  name: string;
+  description: string | null;
+  html_url: string;
+  homepage: string | null;
+}
+
+export interface GithubSearchResponse {
+  total_count: number;
+  incomplete_results: boolean;
+  items: GithubRepo[];
 }
 
 
@@ -30,22 +57,24 @@ const Button: React.FC<{ href: string; children: React.ReactNode; className?: st
 );
 
 export default function Project() {
-  const [projects, setProjects] = useState<Repo[]>([]);
-const [loadMore,setLoadMore]=useState(5);
-  useEffect(() => {
-    fetch("https://api.github.com/users/civdix/repos")
-      .then((res) => res.json() as Promise<Repo[]>) // ✅ Type assertion
-      .then((data) => {
-        const formattedData = data.map((repo) => ({
-          name: repo.name,
-          description: repo.description,
-          html_url: repo.html_url,
-          homepage: repo.homepage,
-        }));
-        setProjects(formattedData.reverse());
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  const [projects, setProjects] = useState<SimplifiedRepo[]>([]);
+const [loadMore,setLoadMore]=useState(6);
+ useEffect(() => {
+  fetch("https://api.github.com/search/repositories?q=user:civdix+topic:showcase")
+    .then((res) => res.json() as Promise<GithubSearchResponse>)
+    .then((response) => {
+      const repos = response.items;
+      const formattedData:SimplifiedRepo[] = repos.map((repo) => ({
+        name: repo.name,
+        description: repo.description,
+        html_url: repo.html_url,
+        homepage: repo.homepage,
+      }));
+      setProjects(formattedData.reverse()); //gievs the latest repos
+    })
+    .catch((error) => console.error("Error fetching data:", error));
+}, []);
+
 
   return (
     <div className="projectMain">
@@ -68,7 +97,7 @@ const [loadMore,setLoadMore]=useState(5);
               <FaGithub /> GitHub
             </Button>{" "}
             {project.homepage && (
-              <Button href={project.homepage} className="bg-neon-green hover:bg-neon-light-green" >
+              <Button href={"https://"+project.homepage} className="bg-neon-green hover:bg-neon-light-green" >
                 <FaExternalLinkAlt /> Live Demo
               </Button>
             )}
@@ -77,7 +106,7 @@ const [loadMore,setLoadMore]=useState(5);
       </motion.div>
     ))}
     <button style={{margin:"0 auto"}} 
-    onClick={()=>setLoadMore(prev=>prev+5)} disabled={loadMore>=projects.length?true:false}>{loadMore>=projects.length?"Check After Sometime for new projects":"Load More"}</button>
+    onClick={()=>setLoadMore(prev=>prev+3)} disabled={loadMore>=projects.length?true:false}>{loadMore>=projects.length?"Check After Sometime for new projects":"Load More"}</button>
   </div>
   
             </div>

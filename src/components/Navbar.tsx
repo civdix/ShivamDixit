@@ -21,7 +21,7 @@ export function Navbar() {
        
         <div className="shivamDixit">
         <span className="name glitch-text outline-text shiny-text ">Shivam</span>
-        <span className="name glitch-text outline-text shiny-text text-3xl">{""}Dixit</span>
+        <span className="name glitch-text outline-text shiny-text" style={{marginLeft:"3px"}}>Dixit</span>
 
         </div>
       </div>
@@ -39,7 +39,7 @@ export function Navbar() {
           <a href="#Projects">Projects</a>
         </div>{' '}
       </div>
-      <button className='p-0 ' style={{justifySelf:"flex-end",background:"transparent"}} onClick={() => {
+      <button className='p-0 mobileShow ' style={{justifySelf:"flex-end",background:"transparent"}} onClick={() => {
         setShowMenu(prev => !prev)
       }}>&#9776;
       </button>

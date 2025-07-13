@@ -127,7 +127,9 @@ margin: 6% 0 0 0;
     width: 100%;
 border-radius: 1000px;
 }
-
+.relative{
+position:relative;
+}
 @media screen and (max-width: 768px){
 .contactUsMain{
   display:none;
