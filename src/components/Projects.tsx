@@ -97,7 +97,7 @@ const [loadMore,setLoadMore]=useState(6);
               <FaGithub /> GitHub
             </Button>{" "}
             {project.homepage && (
-              <Button href={"https://"+project.homepage} className="bg-neon-green hover:bg-neon-light-green" >
+              <Button href={project.homepage} className="bg-neon-green hover:bg-neon-light-green" >
                 <FaExternalLinkAlt /> Live Demo
               </Button>
             )}
@@ -112,3 +112,4 @@ const [loadMore,setLoadMore]=useState(6);
             </div>
   );
 }
+
