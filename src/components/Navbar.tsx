@@ -2,7 +2,7 @@ import '../assets/styles/Navbar.css';
 import { useState } from 'react'
 // Will make Navbar Down side
 const handleResumeDownload = () => {
-  const fileUrl = "../src/assets/documents/Shivam_Dixit_Resume.pdf"; // Replace with the actual file path
+  const fileUrl = "/Shivam_Dixit_Resume_231125.pdf"; // Replace with the actual file path
   const link = document.createElement("a");
   link.href = fileUrl;
   link.download = "shivamDIxitResume.pdf"; // Set the filename
@@ -65,3 +65,4 @@ export function Navbar() {
  
   );
 }
+
